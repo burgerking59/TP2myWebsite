@@ -9,5 +9,5 @@ Route::get('/', function () {
 
 Route::get('/', function () {return view('welcome');})->name('home');
 Route::get('/about', function () {return view('about');})->name('about');
-Route::get('/books', [BookController::class, 'index'])->name('books');
-Route::get('/books/{id}', [BookController::class, 'show']);
+Route::get('/books/{genre}', [BookController::class, 'index'])->where('genre', '[A-Za-z]+')->name('books.index');
+Route::get('/books/{id}', [BookController::class, 'show'])->where('id', '[0-9]+')->name('books.show');
