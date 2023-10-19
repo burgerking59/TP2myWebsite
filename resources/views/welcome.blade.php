@@ -8,10 +8,10 @@
             <a href="{{ route('books.index', 'Horror') }}"><div class="bg-darkWhite text-center p-4">
                 <h3>Horror</h3>
             </div></a>
-            <a href="{{ route('books.index', 'Sci-fi') }}"><div class="bg-darkWhite text-center p-4">
+            <a href="{{ route('books.index', 'SciFi') }}"><div class="bg-darkWhite text-center p-4">
                 <h3>Sci-Fi</h3>
             </div></a>
-            <a href="{{ route('books.index', 'Non-fic') }}"><div class="bg-darkWhite text-center p-4">
+            <a href="{{ route('books.index', 'NonFic') }}"><div class="bg-darkWhite text-center p-4">
                 <h3>Non-Fiction</h3>
             </div></a>
             <a href="{{ route('books.index', 'Crime') }}"><div class="bg-darkWhite text-center p-4">
