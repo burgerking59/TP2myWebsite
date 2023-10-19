@@ -9,7 +9,8 @@ export default {
     colors: {
       'mainGreen': '#CCD5AE',
       'lightGreen': '#E9EDC9',
-      'white': '#FEFAEO',
+      'mainWhite': '#FEFAF0',
+      'darkWhite': '#FAEDCD',
       'mainDark': '#D4A373',
       'mainText': '#444444',
     },
