@@ -9,11 +9,11 @@
     </head>
     <body>
         <header class="bg-mainGreen p-6 grid grid-cols-2 items-center font-bold text-mainText">
-            <h1 class="text-3xl">{{ config('app.name') }}</h1>
+            <a href="{{ route('home') }}"><h1 class="text-3xl">{{ config('app.name') }}</h1></a>
             <div class="w-full max-md:flex max-md:justify-end">
                 <div class="flex justify-around max-md:hidden text-xl">
                     <h2>Search</h2>
-                    <h2>About Us</h2>
+                    <a href="{{ route('about') }}"><h2>About Us</h2></a>
                     <h2>Wishlist</h2>
                     <h2>Profile</h2>
                     <h2">Basket</h2>
