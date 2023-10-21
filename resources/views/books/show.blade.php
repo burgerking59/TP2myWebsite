@@ -5,7 +5,7 @@
     <div class="text-mainText font-semibold">
         <div class="grid grid-cols-3 gap-4">
         <div class="bg-darkWhite text-center p-4">
-            <img src="{{ URL("/img/{$book->image}.jpg") }}" />
+            <img src="{{ URL("/img/{$book->image}") }}" />
             <p>{{ $book['name'] }}</p>
             <p>{{ $book['description'] }}</p>
             <p>{{ $book['author'] }}</p>

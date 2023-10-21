@@ -7,6 +7,7 @@
         <div class="grid grid-cols-3 gap-4">
         
         @foreach ($books as $book)
+        <a href="{{ route('books.show', $book['id']) }}">
             <div class="bg-darkWhite text-center p-4">
                 <img src="{{ URL("/img/{$book->image}") }}" />
                 <p>{{ $book['name'] }}</p>
@@ -14,6 +15,7 @@
                 <p>{{ $book['author'] }}</p>
                 <p>£{{ $book['price'] }}</p>
             </div>
+        </a>
         @endforeach
         </div>
     </div>

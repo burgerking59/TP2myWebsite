@@ -15,7 +15,17 @@
                     <h2>Search</h2>
                     <a href="{{ route('about') }}"><h2>About Us</h2></a>
                     <h2>Wishlist</h2>
-                    <h2>Profile</h2>
+                    @guest
+                        @if (Route::has('login'))
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            
+                        @endif
+                        @if (Route::has('register'))
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+                        @endif
+                    @else
+                        <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Account') }}</a>
+                    @endguest
                     <h2">Basket</h2>
                 </div>
             </div>
