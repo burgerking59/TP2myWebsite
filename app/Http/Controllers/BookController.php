@@ -22,4 +22,8 @@ class BookController extends Controller
             'book' => $book
         ]);
     }
+
+    public function store() {
+        return view('basket');
+    }
 }

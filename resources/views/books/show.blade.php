@@ -10,6 +10,10 @@
             <p>{{ $book['description'] }}</p>
             <p>{{ $book['author'] }}</p>
             <p>£{{ $book['price'] }}</p>
+            <form action="{{ "/basket" }}" method="POST">
+            @csrf
+            <input type="submit" value="Add to basket"/>
+            </form>
         </div>
         </div>
     </div>

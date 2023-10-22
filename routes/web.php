@@ -30,7 +30,9 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', function () {return view('welcome');})->name('home');
 Route::get('/about', function () {return view('about');})->name('about');
+
 Route::get('/books/{genre}', [BookController::class, 'index'])->where('genre', '[A-Za-z]+')->name('books.index');
 Route::get('/books/{id}', [BookController::class, 'show'])->where('id', '[0-9]+')->name('books.show');
+Route::post('/basket', [BookController::class, 'store'])->middleware('auth')->name('books.store');
 
 require __DIR__.'/auth.php';
