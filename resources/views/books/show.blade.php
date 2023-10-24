@@ -12,6 +12,7 @@
             <p>£{{ $book['price'] }}</p>
             <form action="{{ "/basket" }}" method="POST">
             @csrf
+            <input type="hidden" value={{ $book['id'] }} name='id'>
             <input type="submit" value="Add to basket"/>
             </form>
         </div>

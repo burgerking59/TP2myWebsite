@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\User;
-
+use App\Models\Basket;
+use Illuminate\Support\Facades\Auth;
 class BookController extends Controller
 {
     public function index() {
@@ -21,9 +22,5 @@ class BookController extends Controller
         return view('books/show', [
             'book' => $book
         ]);
-    }
-
-    public function store() {
-        return view('basket');
     }
 }

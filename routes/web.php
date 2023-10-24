@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\BasketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,7 @@ Route::get('/about', function () {return view('about');})->name('about');
 
 Route::get('/books/{genre}', [BookController::class, 'index'])->where('genre', '[A-Za-z]+')->name('books.index');
 Route::get('/books/{id}', [BookController::class, 'show'])->where('id', '[0-9]+')->name('books.show');
-Route::post('/basket', [BookController::class, 'store'])->middleware('auth')->name('books.store');
+Route::post('/basket', [BasketController::class, 'store'])->middleware('auth')->name('books.store');
+Route::get('/basket', [BasketController::class, 'index'])->middleware('auth')->name('basket');
 
 require __DIR__.'/auth.php';

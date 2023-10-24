@@ -9,7 +9,7 @@
     </head>
     <body>
         <header class="bg-mainGreen p-6 grid grid-cols-2 items-center font-bold text-mainText">
-            <a href="{{ route('home') }}"><h1 class="text-3xl">{{ config('app.name') }}</h1></a>
+            <h1 class="text-3xl"><a href="{{ route('home') }}">{{ config('app.name') }}</a></h1>
             <div class="w-full max-md:flex max-md:justify-end">
                 <div class="flex justify-around max-md:hidden text-xl">
                     <h2>Search</h2>
@@ -26,7 +26,7 @@
                     @else
                         <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Account') }}</a>
                     @endguest
-                    <h2">Basket</h2>
+                    <a class="nav-link" href="{{ route('basket') }}"><h2>Basket</h2></a>
                 </div>
             </div>
         </header>
