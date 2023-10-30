@@ -36,6 +36,5 @@ Route::get('/books/{genre}', [BookController::class, 'index'])->where('genre', '
 Route::get('/books/{id}', [BookController::class, 'show'])->where('id', '[0-9]+')->name('books.show');
 Route::post('/basket', [BasketController::class, 'store'])->middleware('auth')->name('books.store');
 Route::get('/basket', [BasketController::class, 'index'])->middleware('auth')->name('basket');
-Route::delete('/basket', [BasketController::class, 'destroy'])->middleware('auth')->name('basket.destroy');
 
 require __DIR__.'/auth.php';
