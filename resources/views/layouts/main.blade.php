@@ -27,6 +27,7 @@
                         <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Account') }}</a>
                     @endguest
                     <a class="nav-link" href="{{ route('basket') }}"><h2>Basket</h2></a>
+                    <a class="nav-link" href="{{ route('contact') }}"><h2>Contact</h2></a>
                 </div>
             </div>
         </header>

@@ -24,9 +24,8 @@ class BasketController extends Controller
         ]);
     }
 
-    public function store() {
+    public function store($book_id) {
         $user_id = Auth::id();
-        $book_id = request('id');
 
         $Amount = Basket::where('book_id', $book_id)->where('user_id', $user_id)->get('Amount');
         if ($Amount != "[]") {
@@ -40,6 +39,11 @@ class BasketController extends Controller
             $basket->Amount = 1;
             $basket->save();
         }
-        return redirect('/basket');
+        return redirect('basket');
+    }
+    public function destroy($book_id) {
+        $user_id = Auth::id();
+        $item = Basket::where('book_id', $book_id)->where('user_id', $user_id)->delete();;
+        return redirect('basket');
     }
 }

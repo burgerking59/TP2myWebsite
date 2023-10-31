@@ -11,6 +11,7 @@
             </div>
         </div>
     </div>
+    <a href="{{ route('profile.edit') }}"><h3>Edit</h3></a>
     <form method="POST" action="{{ route('logout') }}">
         @csrf
 
